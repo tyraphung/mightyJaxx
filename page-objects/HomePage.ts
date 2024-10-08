@@ -14,8 +14,8 @@ export class HomePage {
     this.popUp = page.locator(`[data-testid="POPUP"]`)
     this.closeButton = page.locator(`[aria-label="Close dialog"]`)
   }
-  async visitHomePage() {
-    await this.page.goto('https://www.mightyjaxx.com/')
+  async visitHomePage(url: any) {
+    await this.page.goto(url)
   }
   async closePopUp() {
     await expect(this.popUp).toBeVisible()

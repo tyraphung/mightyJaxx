@@ -13,6 +13,6 @@ export async function screenshot(page, name: string) {
   await page.screenshot({ path:`./screenshots/image_${name}.png`, fullPage: true })
 }
 
-export async function assertUrl(page, url: string) {
+export async function assertUrl(page, url: any) {
   await expect(page).toHaveURL(url)
 }

@@ -12,6 +12,9 @@ const config: PlaywrightTestConfig = {
     video: 'retain-on-failure',
     screenshot: 'only-on-failure',
   },
+
+  globalSetup: "./configuration/config.ts",
+  
   projects: [
     {
       name: 'Chromium',

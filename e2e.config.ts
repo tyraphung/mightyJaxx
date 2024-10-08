@@ -12,6 +12,9 @@ const config: PlaywrightTestConfig = {
     video: 'off',
     screenshot: 'on',
   },
+
+  globalSetup: "./configuration/config.ts",
+
   projects: [
     {
       name: 'Chromium',

@@ -7,13 +7,14 @@
     "tests:chrome:headless": "playwright test --config=playwright.config.ts --project=Chromium",
     "tests:firefox": "playwright test --config=playwright.config.ts --project=Firefox",
     "tests:webkit": "playwright test --config=playwright.config.ts --project=Webkit",
-    "tests:e2e": "playwright test --config=e2e.config.ts --project=Chromium",
-    "tests:e2e:report": "playwright test --config=e2e.config.ts --project=Chromium --reporter=html"
+    "tests:e2e": "test_env=pro playwright test --config=e2e.config.ts --project=Chromium",
+    "tests:e2e:report": "test_env=pro playwright test --config=e2e.config.ts --project=Chromium --reporter=html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@playwright/test": "^1.16.3",
+    "dotenv": "~10.0.0",
     "prettier": "^2.5.0"
   }
 }
