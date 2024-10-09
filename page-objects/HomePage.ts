@@ -1,18 +1,10 @@
-import { Locator, Page, expect } from '@playwright/test'
+import { Page, expect } from '@playwright/test'
+import { homePageLocators } from "../locators/homePageLocators";
 
-export class HomePage {
-  readonly page: Page
-  readonly aboutUsButton: Locator
-  readonly blogsButton: Locator
-  readonly popUp: Locator
-  readonly closeButton: Locator
+export class HomePage extends homePageLocators{
 
   constructor(page: Page) {
-    this.page = page
-    this.aboutUsButton = page.locator('text=About Us')
-    this.blogsButton = page.locator('text=Blogs')
-    this.popUp = page.locator(`[data-testid="POPUP"]`)
-    this.closeButton = page.locator(`[aria-label="Close dialog"]`)
+    super(page)
   }
   async visitHomePage(url: any) {
     await this.page.goto(url)

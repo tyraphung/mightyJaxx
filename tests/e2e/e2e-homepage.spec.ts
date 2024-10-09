@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
 import { HomePage } from '../../page-objects/HomePage'
-import { assertUrl, screenshot } from '../../utils/helpers'
+import { assertUrl, screenshot } from '../../lib/Utils'
 import ENV from '../../configuration/env'
 
 test.describe('When user is at Home page then they can navigate to another pages', () => {
